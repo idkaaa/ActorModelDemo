@@ -7,6 +7,9 @@ using System.Threading.Tasks.Dataflow;
 
 namespace ActorModelDemo.Actors
 {
+    /// <summary>
+    /// http://www.jayway.com/2013/11/15/an-actor-model-implementation-in-c-using-tpl-dataflow/
+    /// </summary>
     internal abstract class Actor
     {
         private readonly ActionBlock<Message> p_Action;
