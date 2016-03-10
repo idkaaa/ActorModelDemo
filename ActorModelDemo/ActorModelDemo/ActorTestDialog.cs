@@ -12,6 +12,10 @@ using System.Windows.Forms;
 
 namespace ActorModelDemo
 {
+    /// <summary>
+    /// This dialog helps to demonstrate the actor model in
+    /// this example.
+    /// </summary>
     public partial class ActorTestDialog : Form
     {
         /// <summary>
@@ -35,6 +39,9 @@ namespace ActorModelDemo
             c_TimerMessageTimer.Interval = 1000;  // 1000ms timer for now
         }
 
+        /// <summary>
+        /// Enable the timer.
+        /// </summary>
         private void c_ButtonEnableTimer_Click(object sender, EventArgs e)
         {
             Debug.Print("Enabling the timer, messages will start to be sent");
@@ -70,6 +77,9 @@ namespace ActorModelDemo
            }));
         }
 
+        /// <summary>
+        /// Send each message to the actor
+        /// </summary>
         private void c_TimerMessageTimer_Tick(object sender, EventArgs e)
         {
             string Message = $"Message {p_MessageNumber++}";
